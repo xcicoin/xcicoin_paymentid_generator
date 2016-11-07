@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PaymentID generator for XCI Coin</title>
+<style>
+body {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+<h3>PaymentID:</h3>
+<code id="paymentid">Click the button to generate random XCI Coin PaymentID</code><br/><br/>
+<script>
+function myFunction() {
+    function generateHexString(length) {
+  var ret = "";
+  while (ret.length < length) {
+    ret += Math.random().toString(16).substring(2);
+  }
+  return ret.substring(0,length);
+}
+// PaymentID
+ document.getElementById("paymentid").innerHTML = generateHexString(64);
+}
+</script>
+<button onclick="myFunction()">Generate new PaymentID</button>
+<p>Cannabis Industry Coin XCI Coin is anonymous, the sender is unknown. <br/> But services and merchants can generate a unique <ins>PaymentID</ins> for every customer.<br/>  PaymentID is associated with user/customer account. To receive XCI payments or donations,<br/>  you should generate new PaymentID for every user/customer.<br/> You can do it with this simple generator. Press"Generate new PaymentID" button.</p>
+<p>Copyright 2016 XCI COIN. View source code on <a rel="nofollow" href="https://github.com/xcicoin">GitHub</a></p>
+</body>
+</html>
